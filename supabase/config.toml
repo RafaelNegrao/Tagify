@@ -1,0 +1,12 @@
+project_id = "etiquetas"
+
+# These endpoints are called by the desktop app and by Mercado Pago, not by logged-in
+# Supabase users, so they must not require a Supabase JWT.
+[functions.activate]
+verify_jwt = false
+
+[functions.validate]
+verify_jwt = false
+
+[functions.mp-webhook]
+verify_jwt = false
